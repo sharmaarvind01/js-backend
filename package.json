@@ -1,0 +1,15 @@
+{
+  "name": "express-backend",
+  "version": "1.0.0",
+  "description": "A project regarding js backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Arvind Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
