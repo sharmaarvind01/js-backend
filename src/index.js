@@ -10,7 +10,26 @@ dotenv.config({
 })
 
 
-connectDB();
+connectDB()
+.then(() => {
+    app.on("error", (error) => {
+        console.log("ERR: ",error)
+        throw error
+    })
+
+    app.listen(process.env.PORT, ()=>{
+        console.log(`App is listning on http://localhost:${process.env.PORT}`)
+    })
+})
+.catch((err) => {
+    console.log("MongoDB connection failed !!!", err)
+})
+
+
+
+
+
+
 
 /*(async () => {
     try{
